@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Personal Details {% endblock %}
+
+{% block search %}
+
+{% endblock %}
+
+{% block body %}
+<div class ='col-sm-5 col-sm-offset-3'>
+    <h1>{{ title }}</h1><hr>
+
+    <form method="POST" action="">{% csrf_token %}
+      {{form|crispy}}
+        <div class="pull-right">
+            <input type="submit" class="btn btn-primary" value="Register"/>
+        </div>
+
+</form>
+</div>
+{% endblock %}
